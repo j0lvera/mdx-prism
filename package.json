@@ -1,6 +1,6 @@
 {
   "name": "mdx-prism",
-  "version": "0.1.0",
+  "version": "0.3.1+fork.0.1.0",
   "description": "A fork of the rehype-prism plugin to highlight code blocks in HTML with Prism and more",
   "main": "index.js",
   "scripts": {
@@ -23,7 +23,7 @@
     "prism",
     "html"
   ],
-  "author": "Juan Olvera",
+  "author": "Juan Olvera <juan@jolvera.dev> (https://jolvera.dev)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/j0lv3r4/mdx-prism/issues"
