@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.3.1+fork.0.1.0
+
+- Fork from @mapbox/rehype-prism
+- Add markers following react-refractor example
+- Add highlight line support following gatsby-remark-prismjs example
+
 ## 0.3.1
 
 - Allow uppercase language names in the `language-*` class (e.g. `language-CSS`).
