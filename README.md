@@ -1,7 +1,8 @@
-# rehype-prism
+# mdx-prism
 
+This is a fork of [@mapbox/rehype-prism](https://github.com/mapbox/rehype-prism) that adds line highlighting capabilities, e.g.:
 
-[![Build Status](https://travis-ci.org/mapbox/rehype-prism.svg?branch=master)](https://travis-ci.org/mapbox/rehype-prism)
+<img src="https://jolvera.dev/static/overreacted-code-snippet.jpg" alt="Snippet of code from Dan Abramov&rsquo;s blog"/>
 
 [rehype](https://github.com/wooorm/rehype) plugin to highlight code blocks in HTML with [Prism] (via [refractor]).
 
@@ -13,7 +14,7 @@ If you would like to perform syntax highlighting *in the browser*, you should lo
 ## Installation
 
 ```
-npm install @mapbox/rehype-prism
+npm install mdx-prism
 ```
 
 ## API
@@ -47,21 +48,21 @@ Some examples of how you might do that:
 
 ```js
 const rehype = require('rehype');
-const rehypePrism = require('rehype-prism');
+const mdxPrism = require('mdx-prism');
 
 rehype()
-  .use(rehypePrism)
+  .use(mdxPrism)
   .process(/* some html */);
 ```
 
 ```js
 const unified = require('unified');
 const rehypeParse = require('rehype-parse');
-const rehypePrism = require('rehype-prism');
+const mdxPrism = require('mdx-prism');
 
 unified()
   .use(rehypeParse)
-  .use(rehypePrism)
+  .use(mdxPrism)
   .processSync(/* some html */);
 ```
 
@@ -71,19 +72,19 @@ If you'd like to get syntax highlighting in Markdown, parse the Markdown (with r
 const unified = require('unified');
 const remarkParse = require('remark-parse');
 const remarkRehype = require('remark-rehype');
-const rehypePrism = require('rehype-prism');
+const mdxPrism = require('mdx-prism');
 
 unified()
   .use(remarkParse)
   .use(remarkRehype)
-  .use(rehypePrism)
+  .use(mdxPrism)
   .process(/* some markdown */);
 ```
 
 ## FAQ
 
 <details>
-  <summary>Why does rehype-prism copy the <code>language-</code> class to the <code>&lt;pre&gt;</code> tag?</summary>
+  <summary>Why does mdx-prism copy the <code>language-</code> class to the <code>&lt;pre&gt;</code> tag?</summary>
   
   [Prism recommends](https://prismjs.com/#basic-usage) adding the `language-` class to the `<code>` tag like this:
 
@@ -97,7 +98,7 @@ unified()
   <pre class="language-css"><code class="language-css"><span class="token selector">p</span> <span class="token punctuation">{</span> <span class="token property">color</span><span class="token punctuation">:</span> red <span class="token punctuation">}</span></code></pre>
   ```
 
-  This resulted in many [Prism themes](https://github.com/PrismJS/prism-themes) relying on this behavior by using CSS selectors like `pre[class*="language-"]`. So in order for people using rehype-prism to get the most out of these themes, we decided to do the same.
+  This resulted in many [Prism themes](https://github.com/PrismJS/prism-themes) relying on this behavior by using CSS selectors like `pre[class*="language-"]`. So in order for people using mdx-prism to get the most out of these themes, we decided to do the same.
 </details>
 
 [Prism]: http://prismjs.com/
