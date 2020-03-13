@@ -75,7 +75,7 @@ module.exports = (options = {}) => {
         result = addMarkers(hast_.children, { markers });
       }
     } catch (err) {
-      if (options.ignoreMissing && /Unkown language/.test(err.message)) {
+      if (options.ignoreMissing && /Unknown language/.test(err.message)) {
         return;
       }
 
