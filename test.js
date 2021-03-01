@@ -1,6 +1,8 @@
 'use strict';
 
 const rehype = require('rehype');
+const rehypeParse = require('rehype-parse');
+const unified = require('unified');
 const dedent = require('dedent');
 const rehypePrism = require('./index');
 
@@ -27,6 +29,25 @@ test('finds code and highlights', () => {
     </div>
   `);
   expect(result).toMatchSnapshot();
+});
+
+test('handles newlines in code correctly', () => {
+  const html = dedent`
+    <div>
+      <p>foo</p>
+      <pre><code class="language-typescript{2}">interface Thing {
+  a: number
+}
+</code>
+      </pre>
+    </div>
+  `;
+  const stringResult = processHtml(html);
+  expect(stringResult).toMatchSnapshot();
+
+  const parsedAst = unified().use(rehypeParse, { fragment: true }).parse(html);
+  const transformedAst = unified().use(rehypePrism).run(parsedAst);
+  expect(transformedAst).resolves.toMatchSnapshot();
 });
 
 test('handles uppercase languages correctly', () => {
