@@ -14,10 +14,12 @@ const lineNumberify = function lineNumberify(ast, lineNum = 1) {
 
         const lines = node.value.split('\n');
         for (let i = 0; i < lines.length; i++) {
+          if (i !== 0) ++lineNumber;
+          if (i === lines.length - 1 && lines[i].length === 0) continue;
           result.nodes.push({
             type: 'text',
             value: i === lines.length - 1 ? lines[i] : `${lines[i]}\n`,
-            lineNumber: i === 0 ? lineNumber : ++lineNumber
+            lineNumber: lineNumber
           });
         }
 
