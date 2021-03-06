@@ -1,6 +1,6 @@
 {
   "name": "mdx-prism",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "A fork of the rehype-prism plugin to highlight code blocks in HTML with Prism and more",
   "main": "index.js",
   "scripts": {
