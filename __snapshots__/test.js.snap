@@ -14,8 +14,8 @@ exports[`finds code and highlights 1`] = `
 exports[`handles newlines in code correctly 1`] = `
 "<div>
     <p>foo</p>
-    <pre class=\\"language-typescript\\"><code class=\\"language-typescript{2}\\"><span class=\\"token keyword\\">interface</span> <span class=\\"token class-name\\">Thing</span> <span class=\\"token punctuation\\">{</span>
-<div class=\\"mdx-marker\\">a<span class=\\"token punctuation\\">:</span> <span class=\\"token keyword\\">number</span>
+    <pre class=\\"language-typescript\\"><code class=\\"language-typescript{2}\\"><span class=\\"token keyword\\">interface</span> <span class=\\"token class-name\\"><span class=\\"token maybe-class-name\\">Thing</span></span> <span class=\\"token punctuation\\">{</span>
+<div class=\\"mdx-marker\\">a<span class=\\"token operator\\">:</span> <span class=\\"token builtin\\">number</span>
 </div><span class=\\"token punctuation\\">}</span>
 </code>
     </pre>
@@ -162,12 +162,31 @@ Object {
                 Object {
                   "children": Array [
                     Object {
+                      "children": Array [
+                        Object {
+                          "lineNumber": 1,
+                          "position": Object {
+                            "end": Object {
+                              "column": 119,
+                              "line": 1,
+                              "offset": 118,
+                            },
+                            "start": Object {
+                              "column": 114,
+                              "line": 1,
+                              "offset": 113,
+                            },
+                          },
+                          "type": "text",
+                          "value": "Thing",
+                        },
+                      ],
                       "lineNumber": 1,
                       "position": Object {
                         "end": Object {
-                          "column": 82,
+                          "column": 126,
                           "line": 1,
-                          "offset": 81,
+                          "offset": 125,
                         },
                         "start": Object {
                           "column": 77,
@@ -175,16 +194,22 @@ Object {
                           "offset": 76,
                         },
                       },
-                      "type": "text",
-                      "value": "Thing",
+                      "properties": Object {
+                        "className": Array [
+                          "token",
+                          "maybe-class-name",
+                        ],
+                      },
+                      "tagName": "span",
+                      "type": "element",
                     },
                   ],
                   "lineNumber": 1,
                   "position": Object {
                     "end": Object {
-                      "column": 89,
+                      "column": 133,
                       "line": 1,
-                      "offset": 88,
+                      "offset": 132,
                     },
                     "start": Object {
                       "column": 46,
@@ -205,14 +230,14 @@ Object {
                   "lineNumber": 1,
                   "position": Object {
                     "end": Object {
-                      "column": 90,
+                      "column": 134,
                       "line": 1,
-                      "offset": 89,
+                      "offset": 133,
                     },
                     "start": Object {
-                      "column": 89,
+                      "column": 133,
                       "line": 1,
-                      "offset": 88,
+                      "offset": 132,
                     },
                   },
                   "type": "text",
@@ -224,14 +249,14 @@ Object {
                       "lineNumber": 1,
                       "position": Object {
                         "end": Object {
-                          "column": 123,
+                          "column": 167,
                           "line": 1,
-                          "offset": 122,
+                          "offset": 166,
                         },
                         "start": Object {
-                          "column": 122,
+                          "column": 166,
                           "line": 1,
-                          "offset": 121,
+                          "offset": 165,
                         },
                       },
                       "type": "text",
@@ -241,14 +266,14 @@ Object {
                   "lineNumber": 1,
                   "position": Object {
                     "end": Object {
-                      "column": 130,
+                      "column": 174,
                       "line": 1,
-                      "offset": 129,
+                      "offset": 173,
                     },
                     "start": Object {
-                      "column": 90,
+                      "column": 134,
                       "line": 1,
-                      "offset": 89,
+                      "offset": 133,
                     },
                   },
                   "properties": Object {
@@ -279,14 +304,14 @@ Object {
                           "lineNumber": 2,
                           "position": Object {
                             "end": Object {
-                              "column": 35,
+                              "column": 32,
                               "line": 2,
-                              "offset": 164,
+                              "offset": 205,
                             },
                             "start": Object {
-                              "column": 34,
+                              "column": 31,
                               "line": 2,
-                              "offset": 163,
+                              "offset": 204,
                             },
                           },
                           "type": "text",
@@ -296,20 +321,20 @@ Object {
                       "lineNumber": 2,
                       "position": Object {
                         "end": Object {
-                          "column": 42,
+                          "column": 39,
                           "line": 2,
-                          "offset": 171,
+                          "offset": 212,
                         },
                         "start": Object {
                           "column": 2,
                           "line": 2,
-                          "offset": 131,
+                          "offset": 175,
                         },
                       },
                       "properties": Object {
                         "className": Array [
                           "token",
-                          "punctuation",
+                          "operator",
                         ],
                       },
                       "tagName": "span",
@@ -319,14 +344,14 @@ Object {
                       "lineNumber": 2,
                       "position": Object {
                         "end": Object {
-                          "column": 43,
+                          "column": 40,
                           "line": 2,
-                          "offset": 172,
+                          "offset": 213,
                         },
                         "start": Object {
-                          "column": 42,
+                          "column": 39,
                           "line": 2,
-                          "offset": 171,
+                          "offset": 212,
                         },
                       },
                       "type": "text",
@@ -338,14 +363,14 @@ Object {
                           "lineNumber": 2,
                           "position": Object {
                             "end": Object {
-                              "column": 77,
+                              "column": 74,
                               "line": 2,
-                              "offset": 206,
+                              "offset": 247,
                             },
                             "start": Object {
-                              "column": 71,
+                              "column": 68,
                               "line": 2,
-                              "offset": 200,
+                              "offset": 241,
                             },
                           },
                           "type": "text",
@@ -355,20 +380,20 @@ Object {
                       "lineNumber": 2,
                       "position": Object {
                         "end": Object {
-                          "column": 84,
+                          "column": 81,
                           "line": 2,
-                          "offset": 213,
+                          "offset": 254,
                         },
                         "start": Object {
-                          "column": 43,
+                          "column": 40,
                           "line": 2,
-                          "offset": 172,
+                          "offset": 213,
                         },
                       },
                       "properties": Object {
                         "className": Array [
                           "token",
-                          "keyword",
+                          "builtin",
                         ],
                       },
                       "tagName": "span",
@@ -396,12 +421,12 @@ Object {
                         "end": Object {
                           "column": 34,
                           "line": 3,
-                          "offset": 247,
+                          "offset": 288,
                         },
                         "start": Object {
                           "column": 33,
                           "line": 3,
-                          "offset": 246,
+                          "offset": 287,
                         },
                       },
                       "type": "text",
@@ -413,12 +438,12 @@ Object {
                     "end": Object {
                       "column": 41,
                       "line": 3,
-                      "offset": 254,
+                      "offset": 295,
                     },
                     "start": Object {
                       "column": 1,
                       "line": 3,
-                      "offset": 214,
+                      "offset": 255,
                     },
                   },
                   "properties": Object {
