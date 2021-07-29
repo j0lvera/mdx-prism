@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mapbox/rehype-prism.git"
+    "url": "git+https://github.com/j0lv3r4/mdx-prism.git"
   },
   "keywords": [
     "rehype",
